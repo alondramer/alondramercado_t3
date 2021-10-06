@@ -12,23 +12,41 @@
 
 */
 
-header, footer, aside, article, a:hyperlink {
-  padding: 10px;
+header, footer, aside, article, a {
   outline: 3px dashed gray;
+  padding: 10px;
 }
 
 body {
-  width: 90%;
-  min-width: 640px;
-  max-width: 1024px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 30px 1fr 1fr 100px;
-  grid-gap: 15px;
+   width: 90%;
+   min-width: 640px;
+   max-width: 1024px;
+   margin: 30px auto;
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   grid-template-rows: 50px 30px 1fr 1fr 100px;
+   grid-gap: 15px;
 }
 
-header {
+a {
+   display: block;
+}
 
+
+header {
+   grid-column: 1/-1;
+}
+
+article#intro {
+   grid-row: span 2;
+   grid-column: span 2;
+}
+
+article#main {
+   grid-row: span 2;
+   grid-column: span 3;
+}
+
+footer {
+   grid-column: span 2;
 }
